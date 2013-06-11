@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
+    <link href="../../../lib/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="../../../lib/css/style.css" type="text/css" rel="stylesheet"/>
+    <script src="../../../lib/javascripts/angular.js"></script>
+    <script src="../../../lib/javascripts/javascript-debug.js"></script>
+    <script src="../../../lib/javascripts/javascript-stacktrace.js"></script>
+    <script src="../../../lib/javascripts/debug-helper-functions.js"></script>
+    <script src="../../../lib/javascripts/d3.v3.min.js"></script>
+    <script src="../../../lib/app/controller.js"></script>
+  </head>
+  <body ng-app="App" ng-controller="Controller">
+    <div class="container">
+      <div class="row">
+        <div class="span12 page-header">
+          <h1>
+            Chapter 2 - Basic Module
+          </h1>
+        </div>
+      </div>
+     <div class="row">
+      <div class="span12 lead">
+        Expected output below: several log lines showing that the JavaScript code executed.
+      </div>
+      </div>
+      <div class="row">
+        <div class="span10 offset1">
+          <div id="figure"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h3>Code</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div ng-include src="'snippet.html'"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

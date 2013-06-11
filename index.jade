@@ -1,0 +1,12 @@
+html
+  head
+    link(rel="stylesheet", type="text/css", href="lib/css/bootstrap.css")
+    script(type="text/javascript", src="lib/javascripts/angular.js")
+    script(type="text/javascript", src="lib/app/controller.js")
+  body(ng-app="App", ng-controller="Controller")
+    .container
+      .row
+        .span12.page-header
+          h1 Developing a D3 Edge
+      .row
+        ng-view

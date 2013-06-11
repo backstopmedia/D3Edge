@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
+        <title>
+            Chapter 7 - Data Manager
+        </title>
+        <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../lib/css/style.css">
+        <script src="../../../lib/javascripts/d3.v3.min.js" charset="utf-8">
+        </script>
+        <script src="../../../lib/javascripts/crossfilter.js">
+        </script>
+        <script src="../../../lib/javascripts/topojson.js">
+        </script>
+        <script src="../../../lib/javascripts/angular.js">
+        </script>
+        <script src="../../../lib/app/controller.js">
+        </script>
+    </head>
+    
+    <body ng-app="App" ng-controller="Controller">
+        <div class="container">
+            <div class="row">
+                <div class="span12 page-header">
+                    <h1>
+                        Chapter 7 - Data Manager
+                    </h1>
+                </div>
+            </div>
+            <div class="row" id="wait">
+                <div class="span12">
+                    <p class="lead">
+                        The data is loading, please wait...
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="visibility:hidden" id="instructions">
+                <div class="span12">
+                    <p class="lead">
+                        You can now inspect the data in the console. Try:
+                        <pre>zurichDataManager.getCleanedData();</pre>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                  <h3> Code Snippet</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <div ng-include src="'snippet.html'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js">
+                
+        </script>
+    </body>
+
+</html>

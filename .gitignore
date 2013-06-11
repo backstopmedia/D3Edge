@@ -1,0 +1,12 @@
+.DS_Store
+
+# Editor backup files
+*.bak
+*~
+
+# NodeJS/NPM crud
+node_modules
+
+# PieCrust crud
+original/_cache
+original/_counter

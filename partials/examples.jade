@@ -1,0 +1,8 @@
+.row
+  .span12
+    ul
+      li(ng-repeat="chapter in chapters") 
+        a(ng-href="{{chapter.path}}") {{chapter.name}}
+          ul
+            li(ng-repeat="section in chapter.sections")
+              a(ng-href="{{section.path}}") {{section.name}}

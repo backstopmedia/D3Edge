@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
+    <link href="../../../lib/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="../../../lib/css/style.css" type="text/css" rel="stylesheet"/>
+    <script src="../../../lib/javascripts/d3.v3.min.js"></script>
+    <script src="../../../../lib/javascripts/angular.js"></script>
+    <script src="../../../../lib/app/controller.js"></script>
+    <style>
+      .axis path, .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+      .bar {
+        fill: steelblue;
+        stroke: white;
+      }
+      .x.axis path {
+        display: none;
+      }
+    </style>
+  </head>
+  <body ng-app="App" ng-controller="Controller">
+    <div class="container">
+      <div class="row">
+        <div class="span12 page-header">
+          <h1>
+            Chapter 4 - Reusable Bar Chart with Transitions
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12 lead">
+          Chart shows new data every second using a transition (<em>animation</em>).<br />No user interaction available. (Technically: the <code>customHover</code> event is fired but the user code has <em>not</em> registered a listener (callback) for it.)
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12 lead" id="message"></div>
+      </div>
+      <div class="row">
+        <div class="span4 offset4">
+          <div id="container"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h3>Code</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div ng-include src="'snippet.html'"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      // Usage
+      /////////////////////////////////
+
+      var chart = d3.edge.barChart();
+
+      function update(){
+          var data = randomDataset();
+          d3.select('#container')
+              .datum(data)
+              .call(chart);
+      }
+
+      function randomDataset(){
+          return d3.range(~~(Math.random() * 50)).map(function(d, i){
+              return ~~(Math.random() * 1000);
+          });
+      }
+
+      update();
+
+      setInterval(update, 1000);
+    </script>
+  </body>
+</html>

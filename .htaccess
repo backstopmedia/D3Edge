@@ -1,0 +1,12 @@
+Options Indexes
+
+
+#
+# Send the CSV and other large files in compressed form to spare the network bandwidth and speed up the fetch of these.
+#
+#Gzip
+<ifmodule mod_deflate.c>
+	AddOutputFilterByType DEFLATE application/json text/csv text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
+#End Gzip
+

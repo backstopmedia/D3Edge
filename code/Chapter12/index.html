@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
+    <title>Chapter 12 - Final App</title>
+    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../lib/css/style.css">
+    <script src="../../../lib/javascripts/d3.v3.min.js" charset="utf-8"></script>
+    <script src="../../../lib/javascripts/crossfilter.js"></script>
+    <script src="../../../lib/javascripts/topojson.js"></script>
+    <script src="../../../lib/javascripts/angular.js"></script>
+    <script src="../../../lib/app/controller.js"></script>
+  </head>
+  <body ng-app="App" ng-controller="Controller">
+    <div class="container">
+      <div class="row">
+        <div class="span12 page-header">
+          <h1>Chapter 12 - Final App</h1>
+        </div>
+      </div>
+      <div class="row" id="wait">
+        <div class="span12">
+          <p class="lead"> Please wait while the data loads...there's a lot!</p>
+        </div>
+      </div>
+      <div class="row" id="ready" style="visibility:hidden">
+        <div class="span12">
+          <p class="lead">Ready! Have fun!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h2>Zurich</h2>
+        </div>
+      </div>
+      <div class="row vizContainer">
+        <div class="span6">
+          <div id="zurich_map"></div>
+        </div>
+        <div class="span5">
+          <div id="zurich_hist"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h2>Geneva</h2>
+        </div>
+      </div>
+      <div class="row vizContainer">
+        <div class="span6">
+          <div id="geneva_map"></div>
+        </div>
+        <div class="span5">
+          <div id="geneva_hist"></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="row">
+        <div class="span12">
+          <h2>San Francisco</h2>
+        </div>
+      </div>
+      <div class="row vizContainer">
+        <div class="span6">
+          <div id="san_francisco_map"></div>
+        </div>
+        <div class="span5">
+          <div id="sanFran_hist"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h3>Code</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div ng-include src="'snippet.html'"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
